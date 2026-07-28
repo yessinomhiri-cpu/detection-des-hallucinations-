@@ -72,6 +72,20 @@ naive-rag/
 └── index/              # base ChromaDB persistée (généré automatiquement)
 ```
 
+## Interface Streamlit
+
+Une interface web est disponible en plus de la ligne de commande :
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Elle s'ouvre automatiquement dans votre navigateur (`http://localhost:8501`) et permet de :
+- choisir le dossier de documents, le dossier d'index, le modèle Ollama et le top-k depuis la barre latérale
+- lancer l'indexation d'un clic (bouton "Indexer les documents")
+- discuter avec le RAG dans une interface de type chat, avec la réponse qui s'affiche en streaming
+- consulter les sources utilisées pour chaque réponse (fichier, score de similarité, extrait du chunk)
+
 ## Note sur la ré-ingestion
 
 À chaque `ingest`, la collection ChromaDB est entièrement reconstruite (les anciens
